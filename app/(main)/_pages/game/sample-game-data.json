@@ -1,0 +1,83 @@
+{
+    "gameId": 2,
+    "songCount": 5,
+    "players": [
+        {
+            "id": "0",
+            "userName": "Hyunwoo Kim",
+            "score": 0
+        }
+    ],
+    "songList": [
+        {
+            "id": 47325,
+            "name": "I'm sure you'll have a normal love",
+            "kname": "평범한 사랑을 하겠지만",
+            "videoName": "평범한 사랑을 하겠지만",
+            "videoLink": "erhj92vMhOo",
+            "releaseDate": "2017-04-21",
+            "idOriginalArtist": 0,
+            "artist": {
+                "id": 5799,
+                "name": "1415",
+                "kname": "1415"
+            }
+        },
+        {
+            "id": 45452,
+            "name": "Calmly",
+            "kname": "담담하게",
+            "videoName": "담담하게",
+            "videoLink": "lidGswvrnnc",
+            "releaseDate": "2013-04-18",
+            "idOriginalArtist": 0,
+            "artist": {
+                "id": 1374,
+                "name": "Lucia",
+                "kname": "루시아"
+            }
+        },
+        {
+            "id": 24293,
+            "name": "LE NOIR",
+            "kname": "LE NOIR",
+            "videoName": "LE NOIR",
+            "videoLink": "77CBIiE-apA",
+            "releaseDate": "2016-11-07",
+            "idOriginalArtist": 0,
+            "artist": {
+                "id": 22,
+                "name": "B.A.P",
+                "kname": "비에이피"
+            }
+        },
+        {
+            "id": 47468,
+            "name": "I have a man",
+            "kname": "난 남자가 있는데",
+            "videoName": "난 남자가 있는데",
+            "videoLink": "zFNjZKApCyQ",
+            "releaseDate": "2006-03-09",
+            "idOriginalArtist": 0,
+            "artist": {
+                "id": 136,
+                "name": "Lyn",
+                "kname": "린"
+            }
+        },
+        {
+            "id": 36073,
+            "name": "Siren",
+            "kname": "사이렌",
+            "videoName": "Siren (사이렌)",
+            "videoLink": "P0azF0Xt4Hc",
+            "releaseDate": "2018-09-05",
+            "idOriginalArtist": 0,
+            "artist": {
+                "id": 268,
+                "name": "Sunmi",
+                "kname": "선미"
+            }
+        }
+    ]
+}

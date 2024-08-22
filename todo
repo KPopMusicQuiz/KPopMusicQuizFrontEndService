@@ -1,0 +1,37 @@
+TODO LIST
+
+chat
+- box instead of full width or fade away after a while
+- focuses top instead of bottom when switchiing tabs and messages are loaded extra (buggy)
+- disable loading history for convesation completely // limit loading history for channel to currentDate
+- reorganize chatstore possibly move some to constants instead of managing state
+- conversation close button // channel&conversation add button
+
+login
+- login form error message behavior
+- oauthaccountnotlinked / already exsits w/e fix (merge accounts option or redirect to login option)
+- look into jwt / session encoding && vulnerability (http cookie only store option?)
+- disable multisession of single user aka double login
+
+refactoring
+- formfield email
+- etc
+
+FAR FUTURE BACKLOG
+
+shadcn ui
+- Chart for server status/etc data
+- Toaster for notifications
+- Input OTP option for verification 123456
+- pagination for forum
+- context menu for custom right click
+
+
+References
+Typescript
+React
+Nextjs
+TailwindCSS
+FramerMotion
+
+Aceternity
