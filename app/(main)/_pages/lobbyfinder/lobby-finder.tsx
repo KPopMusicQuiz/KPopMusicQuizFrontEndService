@@ -13,7 +13,7 @@ const LobbyFinder = ({ isChatOpen }) => {
   return (
     <motion.div
       className={cn(
-        "dark:bg-gray-900 text-white overflow-y-auto shadow-lg rounded-lg relative \
+        "dark:bg-gray-900 text-white overflow-hidden shadow-lg rounded-lg relative \
            w-[90%] h-[90%] flex",
         isChatOpen ? "" : "",
       )}

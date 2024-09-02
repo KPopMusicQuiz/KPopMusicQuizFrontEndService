@@ -26,8 +26,7 @@ interface ChatStore {
   unreadConversationIds: string[];
   onNewDirectMessage: (conversationId: string) => void;
   isChatOpen: boolean;
-  onChatOpen: () => void;
-  onChatClose: () => void;
+  toggleChat: () => void;
 };
 
 export const useChat = create<ChatStore>((set) => ({
@@ -53,6 +52,5 @@ export const useChat = create<ChatStore>((set) => ({
     unreadConversationIds: [conversationId, ...state.unreadConversationIds]
   })),
   isChatOpen: false,
-  onChatOpen: () => set(() => ({ isChatOpen: true })),
-  onChatClose: () => set(() => ({ isChatOpen: false })),
+  toggleChat: () => set((state) => ({ isChatOpen: !state.isChatOpen })),
 }));

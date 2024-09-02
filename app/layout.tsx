@@ -11,6 +11,7 @@ import { SocketProvider } from "@/components/providers/socket-provider";
 import { Sidebar } from "@/components/sidebar/sidebar";
 
 import "./globals.css";
+import { CommandProvider } from "@/components/providers/command-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,21 +34,23 @@ export default async function RootLayout({
             <SocketProvider>
               <ModalProvider />
               <QueryProvider>
-                <main className="flex h-dvh w-screen relative">
-                  <Sidebar>
-                    <div
-                      className="h-full w-full flex flex-col items-center justify-center relative overflow-hidden \
-                                 dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2]"
-                    >
+                <CommandProvider>
+                  <main className="flex h-dvh w-screen relative">
+                    <Sidebar>
                       <div
-                        className="absolute pointer-events-none inset-0 flex items-center justify-center \
+                        className="h-full w-full flex flex-col items-center justify-center relative overflow-hidden \
+                                 dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2]"
+                      >
+                        <div
+                          className="absolute pointer-events-none inset-0 flex items-center justify-center \
                                    dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
-                      />
-                      {children}
-                      <Chat />
-                    </div>
-                  </Sidebar>
-                </main>
+                        />
+                        <Chat />
+                        {children}
+                      </div>
+                    </Sidebar>
+                  </main>
+                </CommandProvider>
               </QueryProvider>
             </SocketProvider>
           </ThemeProvider>

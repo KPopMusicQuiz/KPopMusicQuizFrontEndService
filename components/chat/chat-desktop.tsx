@@ -12,12 +12,9 @@ import { useChatQuery } from "@/hooks/chat/use-chat-query";
 import { useChatSocket } from "@/hooks/chat/use-chat-socket";
 import { useChat } from "@/hooks/chat/use-chat-store";
 import { useProfileQuery } from "@/hooks/use-profile-query";
-import { useSidebar } from "@/hooks/use-sidebar";
-import { cn } from "@/lib/utils";
-
 
 export const ChatDesktop = () => {
-  const { activeChat, isChatOpen, onChatClose } = useChat();
+  const { activeChat, isChatOpen, toggleChat } = useChat();
 
   const { channelsQuery, conversationsQuery } = useProfileQuery();
   const { messagesQuery } = useChatQuery();
@@ -41,7 +38,7 @@ export const ChatDesktop = () => {
         >
           <div className="flex justify-between items-center pl-4 h-[15%] border-b-2 border-gray-700">
             <h3 className="text-lg font-semibold flex items-center gap-2 text-[#C9F7F8]"><MdChat /> Chat</h3>
-            <button onClick={onChatClose} className="text-xl pr-2">
+            <button onClick={toggleChat} className="text-xl pr-2">
               <MdKeyboardArrowDown />
             </button>
           </div>

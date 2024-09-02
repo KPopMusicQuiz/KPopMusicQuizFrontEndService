@@ -68,10 +68,8 @@ export default async function handler(
       }
     });
 
-    const emit1 = res?.socket?.server?.io?.emit(`profile:${conversation.profileOneId}:direct-messages`, message);
-    const emit2 = res?.socket?.server?.io?.emit(`profile:${conversation.profileTwoId}:direct-messages`, message);
-
-    console.log(emit1, emit2)
+    res?.socket?.server?.io?.emit(`profile:${conversation.profileOneId}:direct-messages`, message);
+    res?.socket?.server?.io?.emit(`profile:${conversation.profileTwoId}:direct-messages`, message);
 
     return res.status(200).json(message);
   } catch (error) {

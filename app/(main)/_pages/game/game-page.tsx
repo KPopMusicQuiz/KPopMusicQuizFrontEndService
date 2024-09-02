@@ -16,7 +16,7 @@ const GamePage = () => {
   return (
     <>
       <GameNavBar volume={volume} handleVolumeChange={handleVolumeChange} />
-      <div className="flex min-h-full w-full flex flex-col items-center space-y-[8%]">
+      <div className="flex min-h-full w-full relative flex flex-col items-center space-y-[8%]">
         <GameQuizContainer volume={volume} />
         <MembersList />
       </div>

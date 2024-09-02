@@ -16,7 +16,7 @@ export const useChatQuery = () => {
   const fetchMessages = async ({ pageParam = undefined }) => {
     // above param is infinite loading maybe disable for lobby
     const url = qs.stringifyUrl({
-      url: chatMessagesFetchUrl,
+      url: chatMessagesFetchUrl as string,
       query: {
         cursor: pageParam,
         [chatType]: activeChat?.id,

@@ -3,6 +3,7 @@ import VideoPlayer from "./_components/video-player";
 import AnswerInput from "./_components/answer-input";
 import Standings from "./_components/standings";
 import SongInfo from "./_components/song-info";
+import { motion } from "framer-motion";
 
 interface GameQuizContainerProps {
   volume: number;
@@ -81,8 +82,8 @@ const GameQuizContainer = ({
   };
 
   return (
-    <div className="absoulte top-[5%] flex w-full flex-col justify-center items-center">
-      {/** TODO: header needs to show prog */}
+      <div className="justify-center flex w-full flex-col justify-center items-center">
+      {/* game progress indicator todo */}
       <h1 className="text-3xl font-bold mt-4 mb-4">Guess the K-Pop Song</h1>
       <div className="flex items-center justify-center relative space-x-[10%]">
         <Standings userData={testStandings.sort((a, b) => b.currentScore - a.currentScore)} />
@@ -96,7 +97,7 @@ const GameQuizContainer = ({
         />
       </div>
       <AnswerInput songs={searchList} onGuess={handleGuess} />
-    </div>
+      </div>
   );
 };
 

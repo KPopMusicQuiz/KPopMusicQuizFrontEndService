@@ -5,7 +5,6 @@ import { IoIosArrowForward } from "react-icons/io";
 import { MdKeyboardArrowUp } from "react-icons/md";
 
 import { useChat } from "@/hooks/chat/use-chat-store";
-import { useSidebar } from "@/hooks/use-sidebar";
 import { MessageWithProfile } from "@/hooks/chat/use-chat-socket";
 import { cn } from "@/lib/utils";
 
@@ -16,7 +15,7 @@ interface ChatPreviewProps {
 export const ChatPreview = ({
   message,
 }: ChatPreviewProps) => {
-  const { activeChat, isChatOpen, onChatOpen } = useChat();
+  const { activeChat, isChatOpen, toggleChat } = useChat();
 
   return (
     <div className="absolute bottom-0 right-0 w-full">
@@ -42,7 +41,7 @@ export const ChatPreview = ({
             "absolute right-0 flex px-2 text-white rounded-t-lg border border-gray-600",
             isChatOpen ? "hidden" : "block"
           )}
-          onClick={onChatOpen}
+          onClick={toggleChat}
         >
           <span className="text-lg flex items-center"><MdKeyboardArrowUp className="text-lg" />chat</span>
         </button>

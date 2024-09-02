@@ -12,6 +12,16 @@ const ioHandler = (req: NextApiRequest, res: NextApiResponseServerIO) => {
       path: path,
       addTrailingSlash: false,
     });
+
+    io.on("connection", (socket) => {
+      console.log(socket.id, "connected");
+
+      socket.on("disconnect", (reason) => {
+        console.log(socket.id, "disconnected", reason);
+      });
+    });
+
+
     res.socket.server.io = io;
   }
 

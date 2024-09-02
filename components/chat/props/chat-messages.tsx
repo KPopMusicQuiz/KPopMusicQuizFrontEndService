@@ -60,7 +60,7 @@ export const ChatMessages = ({
 
   return (
     <div
-      className="flex-1 flex flex-col overflow-y-auto overflow-x-hidden custom-scrollbar"
+      className="flex-1 flex flex-col overflow-y-scroll overflow-x-hidden custom-scrollbar"
       ref={chatRef}
     >
       {!hasNextPage && <div className="flex-1" />}
